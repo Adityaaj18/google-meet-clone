@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+.users-container, .buttons-container, body{
+  background: #313131;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.user-card{
+  background: #5a5a5a;
+  border-radius: 4px;
+  padding:20px;
+  height:170px;
+ display:flex;
+ justify-content: center;
+ 
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.users-container{
+  padding:20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-img{
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-top: 10%;
+
+  
+}
+
+.buttons-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+ position: fixed;
+ bottom: 0;
+  max-height: 100vh;
+  width: 100%;
+  padding:20px;
 }
 
-.App-link {
-  color: #61dafb;
+.icon{
+  color: #fff;
+  font-size: 38px;
+  background-color: #5a5a5a;
+  padding:8px;
+  border-radius:50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.icon2{
+  font-size: 25px;
+  color: #fff;
+}
+
+.icon2:hover{
+  cursor: pointer;
+}
+
+.sidebar{
+  background-color: #fff;
+  width: 350px;
+  height: 87vh;
+  position: fixed;
+  top:0;
+  right: -100%;
+  transition: 850ms;
+  border-radius:6px;
+  padding:20px;
+  margin-right: 10px;
+}
+
+
+
+.sidebar.active{
+  right: 0;
+  transition: 500ms;
+}
+
+.msgbox{
+  background-color: #fff;
+  width: 350px;
+  height: 85vh;
+  position: fixed;
+  top:0;
+  right: -100%;
+  transition: 850ms;
+  border-radius:6px;
+  padding:20px;
+  margin: 10px;
+}
+
+.msgbox.active{
+  right: 0;
+  transition: 500ms;
+}
+
+.msg-wrapper span{
+  font-weight: 600;
+}
+
+.msg-wrapper p{
+  font-size:14px;
+  margin-bottom: 0px;
+}
+
+
+.incall-user{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.user-name{
+  font-size:14px;
+}
+
+.user-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.mic,
+.pin{
+  margin: 0px 15px;
+}
+
+
+.close{
+  font-size: 20px;
+  margin-top:5px;
+}
+
+.close:hover{
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .user-card{
+   height:250px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 400px){
+  .buttons-container{
+    flex-direction:column;
+    align-items:center;
+    gap: 10px;
   }
 }
